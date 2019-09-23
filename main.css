@@ -3,3 +3,15 @@ body {
     margin: auto;
     
 }
+.container {
+    margin: 50px 200px;
+    padding: 50px;
+    box-shadow: 4px 4px 4px;
+    width: auto;
+    height: auto;
+    background-color: whitesmoke;
+    border-radius: 3px;
+}
+h1, h5 {
+    text-align: center;
+}
