@@ -18,3 +18,14 @@ h1, h5 {
 #buttons {
     margin: 30px;
 }
+#cold {
+    color: blue;
+}
+
+#hot {
+    color: red;
+}
+
+#normal {
+    color: green;
+}
