@@ -21,3 +21,5 @@ const determineConverter = (e) => {
         $('#input-temp').val('');
     }
   }  
+
+  document.getElementById('convert').addEventListener('click', determineConverter);
