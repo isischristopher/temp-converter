@@ -48,6 +48,38 @@ const determineConverter = (e) => {
     }
   }  
 
+
+const changeColor = (temp, hotTemp, coldTemp, tempT) => {
+    if (temp <= coldTemp) {
+        let color = 'cold'; 
+        icon = '<i class="fas fa-snowflake"></i>';
+        outputBuilder(icon, newTemp, tempT, color);
+    } else if (temp >= hotTemp) {
+        color = 'hot'; 
+        icon = '<i class="fas fa-fire"></i>';
+        outputBuilder(icon, newTemp, tempT, color);
+    } else {
+        color = 'normal';
+        icon = '<i class="fas fa-thermometer-half"></i>';
+        outputBuilder(icon, newTemp, tempT, color);
+    }
+}
+
+const outputBuilder = (icon, newTemp, tempType, cardColor) => {
+    domString = `
+    <div class="temp-card" id="${cardColor}">
+        <div class="row temp-row">
+            <div>
+            ${icon}
+            </div>
+            <div class="text-center">
+                <h2 class="card-text">${newTemp}° ${tempType}</h2>
+            </div>
+        </div>
+    </div>
+    `
+    printToDom('output', domString);
+}
 document.getElementById('convert').addEventListener('click', determineConverter);
 document.getElementById('body').addEventListener('keypress', determineConverter);
 document.getElementById('clear').addEventListener('click', determineConverter);
